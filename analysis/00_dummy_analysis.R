@@ -1,5 +1,8 @@
 coords <- jsonlite::read_json("analysis/data/raw/ex_coords.txt", simplifyVector = TRUE)
 
+sh <- read.csv("/home/oj/Downloads/selected_hcs with GPS..xlsx - Sheet1.csv")
+coords <- sh[,c("Altitude", "Longitude")]
+
 # load packages
 library(ggplot2)
 library(rworldmap)
